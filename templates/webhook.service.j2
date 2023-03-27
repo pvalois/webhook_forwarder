@@ -1,0 +1,13 @@
+[Unit]
+Requires=network.target remote-fs.target
+After=network.target remote-fs.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/forwarder.py
+ExecStop=pgrep -a forwarder.py | xargs kill -9
+
+[Install]
+WantedBy=multi-user.target
+

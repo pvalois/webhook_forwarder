@@ -1,0 +1,12 @@
+- name: stop service
+  service: 
+    name: webhook
+    state: stopped
+
+- name: remove webhook forwarder
+  file:  
+    name: "{{ item }}"
+    state: absent
+  with_items: 
+    - /usr/local/bin/forwarder.py
+    - /etc/systemd/system/webhook.service
