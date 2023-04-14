@@ -7,7 +7,7 @@ Pour le jouer, créez les composants naturel d'ansible :
 
 ```
 ansible
-├── inventories
+├── inventory
 │   └── hosts.yml
 ├── playbooks
 │   └── webhooks.yml
