@@ -7,10 +7,10 @@ Pour le jouer, créez les composants naturel d'ansible :
 
   |--ansible
   |  |--inventory
-  |  | |--hosts
+  |  |  |--hosts
   |--playbooks
   |  |-- webhooks_forwarder.yml
-  |-- roles
+  |--roles
 
 Clonez le repository dans roles
 --------------------------------
