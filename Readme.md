@@ -8,8 +8,8 @@ Pour le jouer, créez les composants naturel d'ansible :
   - ansible
     - inventory
       - hosts
-    - paybooks
-      - webhook_forwarder.yml
+    - playbooks
+      - webhooks_forwarder.yml
     - roles
 
 Clonez le repository dans roles
@@ -23,7 +23,7 @@ git clone https://github.com/pvalois/webhook_forwarder.git
 Créer votre inventaire
 -----------------------
 
-Editez le fichier inventory/hoss comme suit : 
+Editez le fichier **inventory/hosts** comme suit : 
 
 ```
 [all:children]
@@ -42,7 +42,7 @@ serveur4
 Créer le playbook
 ------------------
 
-Editer le fichier playbook/webhook_forwarder.yml contenant : 
+Editer le fichier **playbooks/webhooks_forwarder.yml** contenant : 
 
 ``` 
 - name: Install Webhook forwarder for console
@@ -54,4 +54,11 @@ Editer le fichier playbook/webhook_forwarder.yml contenant :
     - name: import role
       include_role: 
         name: webhook_forwarder
+``` 
+
+Jouer le role  
+--------------
+
+```
+ansible-playbook -i inventory/hosts playbooks/webhooks_forwarder.yml --ask-pass -K 
 ``` 
