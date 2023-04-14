@@ -5,12 +5,12 @@ Paramétrage
 
 Pour le jouer, créez les composants naturel d'ansible : 
 
-  - ansible
-    - inventory
-      - hosts
-    - playbooks
-      - webhooks_forwarder.yml
-    - roles
+  |--ansible
+  |  |--inventory
+  |  | |--hosts
+  |--playbooks
+  |  |-- webhooks_forwarder.yml
+  |-- roles
 
 Clonez le repository dans roles
 --------------------------------
