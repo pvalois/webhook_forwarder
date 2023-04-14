@@ -36,6 +36,7 @@ serveur2
 [HorsProd]
 serveur3
 serveur4
+```
 
 Créer le playbook
 ------------------
