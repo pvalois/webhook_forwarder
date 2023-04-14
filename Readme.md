@@ -6,12 +6,12 @@ Paramétrage
 Pour le jouer, créez les composants naturel d'ansible : 
 
 ```
+ansible
 ├── inventories
 │   └── hosts.yml
 ├── playbooks
 │   └── webhooks.yml
 └── roles
-    └── webhook_forwarder
 ``` 
 
 Clonez le repository dans roles
