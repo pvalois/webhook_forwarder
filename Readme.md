@@ -18,14 +18,14 @@ Clonez le repository dans roles
 ```
 cd roles
 git clone https://github.com/pvalois/webhook_forwarder.git
-``` 
+```
 
 Créer votre inventaire
 -----------------------
 
 Editez le fichier inventory/hoss comme suit : 
 
-``` 
+```
 [all:children]
 Prod
 HorsProd
