@@ -1,7 +1,10 @@
+Utilisation du script
+======================
+
 Ce role ansible déploie un script python qui extrait d'un envoie d'alertes openshift, la partie pertinente, et la tranfère sous forme text à un webhoot mattermost.
 
 Paramétrage
-============
+------------
 
 Pour le jouer, créez les composants naturel d'ansible : 
 
@@ -21,6 +24,10 @@ Clonez le repository dans roles
 cd roles
 git clone https://github.com/pvalois/webhook_forwarder.git
 ```
+
+Editez les scripts dans roles/webhook_forwarder/files/ (**forwarder-prod.py** et **forwarder-horsprod.py**) 
+pour positionner l'adresse du webhook destination (**mmwebhooks**)
+
 
 Créer votre inventaire
 -----------------------
