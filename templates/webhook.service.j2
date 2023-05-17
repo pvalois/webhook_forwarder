@@ -1,14 +1,17 @@
 [Unit]
-Requires=network.target remote-fs.target
+Description=Flask Forwarder Service
 After=network.target remote-fs.target
 
 [Service]
+#Environment="FLASK_PORT=5000"
+#Environment="MM_WEBHOOKS_URL="
 Type=simple
 User=root
 ExecStart=/usr/local/bin/forwarder.py
-ExecStop=pgrep -a forwarder.py | xargs kill -9
+Restart=always
+#ExecStop=pgrep -a forwarder.py | xargs kill -9
+KillSignal=SIGQUIT
 Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
-

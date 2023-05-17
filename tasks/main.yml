@@ -17,23 +17,13 @@
     state: reloaded
   when: ( ansible_os_family == 'RedHat' )
 
-- name: copy prod forwarder.py to /usr/local/bin/
+- name: copy forwarder.py to /usr/local/bin/
   copy:
-    src: forwarder-prod.py
+    src: forwarder.py
     dest: /usr/local/bin/forwarder.py
     owner: root
     group: root
     mode: 0755
-  when: "'Prod' is in group_names"
-
-- name: copy horsprod forwarder.py to /usr/local/bin/
-  copy:
-    src: forwarder-horsprod.py
-    dest: /usr/local/bin/forwarder.py
-    owner: root
-    group: root
-    mode: 0755
-  when: "'HorsProd' is in group_names"
 
 - name: push systemd script
   template:
